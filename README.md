@@ -1,6 +1,7 @@
 # Simple News App - Rails Competency Test
 To get started please fork this project and carefully read the following instructions.
-Please commit all of the code to your fork of this project. May the force be with you.
+
+Commit all of the code to your fork of this project. May the force be with you.
 
 ## User Personas
 The project will have multiple roles that interact with each other.
