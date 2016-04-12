@@ -42,7 +42,7 @@ Use one of these gems: Petergate *(Preferred)*, Pundit, Cancancan.
 ###### Role Names
 * user
 * editor
-* site_admin *(Extra Credit)*
+* admin *(Extra Credit)*
 
 ## Database
 Use sqlite
