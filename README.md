@@ -8,7 +8,7 @@ The project will have multiple roles that interact with each other.
 * Guest (No Login)
 * Vanilla Users (Logged in - No special role)
 * Editor Users
-* Site Admin Users *(Extra Credit)*
+* Admin Users *(Extra Credit)*
 
 ## User Functionality
 ##### Guests (No Login)
@@ -29,7 +29,7 @@ The project will have multiple roles that interact with each other.
 * Can delete articles that they created
 * Can edit articles that they created
 
-##### Site Admin User *(Extra Credit)*
+##### Admin User *(Extra Credit)*
 * Can create users and set roles.
 * Can edit users and change roles.
 * Can't edit/destroy/create articles.
