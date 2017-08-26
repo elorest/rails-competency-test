@@ -42,6 +42,10 @@ group :development, :test do
   gem 'minitest-rails', '~> 3.0'
 end
 
+group :test do
+  gem 'database_cleaner', '~> 1.6', '>= 1.6.1'
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
