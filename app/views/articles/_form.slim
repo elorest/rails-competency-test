@@ -1,0 +1,18 @@
+= form_for(@article) do |f|
+  .form-group
+    = f.label :title
+  .form-group
+    = f.text_field :title, class: 'form-control input-lg'
+  
+  .form-group
+    = f.label :category
+  .form-group
+    = f.text_field :category, class: 'form-control input-lg'
+
+  .form-group
+    = f.label :content
+  .form-group
+    = f.text_area :content, class: 'form-control input-lg'
+
+  .form-group
+    = f.submit 'Submit', class: 'btn btn-primary'

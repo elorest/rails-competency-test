@@ -1,0 +1,9 @@
+nav.navbar.navbar-inverse
+  .container-fluid
+    .navbar-header
+      = link_to 'Articler', root_path, class: 'navbar-brand'
+      ul.nav.navbar-nav
+        li= link_to('All Articles', articles_path)
+        li= link_to('New Article', new_article_path)
+        li= link_to('Sign Out', destroy_user_session_path, method: :delete) if user_signed_in?
+        li= link_to 'Login', new_user_session_path unless user_signed_in?

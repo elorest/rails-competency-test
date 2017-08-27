@@ -1,2 +1,10 @@
-h1 Welcome#index
-p Find me in app/views/welcome/index.html.slim
+- @articles.each_pair do |category, array|
+  .row
+    h2= category.titleize
+    - array.each do |art|
+      .col-xs-12.col-md-4
+        .card
+          .caption
+            h3= art.title.titleize
+            p= art.content.first(50)
+            p= link_to 'Read', article_path(art.id), class: 'btn btn-default'
