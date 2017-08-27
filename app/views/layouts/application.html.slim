@@ -8,6 +8,6 @@ html
   body
     = render partial: "shared/navbar"
     div.container
-      p.notice= notice
-      p.alert= alert
+      p.notice.text-info= notice
+      p.alert.text-danger= alert
       = yield
