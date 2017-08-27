@@ -1,8 +1,9 @@
-= @articles.each_slice(3) do |slice|
+- @articles.each_pair do |category, array|
   .row
-    - slice.each do |art|
+    h2= category.titleize
+    - array.each do |art|
       .col-xs-12.col-md-4
-        .thumbnail
+        .card
           .caption
             h3= art.title.titleize
             p= art.content.first(50)
