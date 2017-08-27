@@ -5,5 +5,7 @@ class Article < ApplicationRecord
   validates :content, presence: true
   validates :category, presence: true
 
-  scope :three_from_each_category, -> { all.group_by(:category) }
+  scope :first_three_from_each_category, -> do 
+    all.group_by {|a| a.category }.map {|i| i.first(3) }.to_h 
+  end 
 end
