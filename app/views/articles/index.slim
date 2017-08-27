@@ -9,5 +9,8 @@
             p
               | By: 
               = art.user.email
-            p= link_to('Edit', edit_article_path(art.id), class: 'btn btn-default') if art.user == current_user
+            p
+              = link_to('Read', article_path(art.id), class: 'btn btn-default')
+              = link_to('Edit', edit_article_path(art.id), class: 'btn btn-ghost') if art.user == current_user
+
             

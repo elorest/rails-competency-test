@@ -12,6 +12,7 @@
           .col-xs-12
             h5= @article.content.capitalize
         .row.
-          .col-xs-12 
-            = link_to 'Edit', edit_article_path(@article), class: 'btn btn-primary btn-sm'
-
+          .col-xs-6.text-right.col-xs-offset-6
+            - if @article.user == current_user
+              = link_to 'Edit', edit_article_path(@article), class: 'btn-ghost btn-sm btn'
+              = link_to 'Delete', article_path(@article), class: 'btn btn-danger btn-sm', method: :delete 

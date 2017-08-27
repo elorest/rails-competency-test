@@ -35,6 +35,12 @@ class ArticlesController < ApplicationController
   def show
   end
 
+  def destroy
+    @article.destroy
+
+    redirect_to articles_path, notice: 'Article deleted!'
+  end
+
   private
   
   def article_params
