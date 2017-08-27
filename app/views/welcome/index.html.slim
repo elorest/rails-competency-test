@@ -1,2 +1,9 @@
-h1 Welcome#index
-p Find me in app/views/welcome/index.html.slim
+= @articles.each_slice(3) do |slice|
+  .row
+    - slice.each do |art|
+      .col-xs-12.col-md-4
+        .thumbnail
+          .caption
+            h3= art.title.titleize
+            p= art.content.first(50)
+            p= link_to 'Read', article_path(art.id), class: 'btn btn-default'

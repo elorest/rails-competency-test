@@ -1,0 +1,20 @@
+h1 New Article
+
+= form_for(@article) do |f|
+  div
+    = f.label :title
+  div
+    = f.text_field :title
+  
+  div
+    = f.label :category
+  div
+    = f.text_field :category
+
+  div
+    = f.label :content
+  div
+    = f.text_area :content
+
+  div
+    = f.submit 
