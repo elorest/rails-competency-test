@@ -41,7 +41,7 @@ gem 'petergate', '~> 1.7', '>= 1.7.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-byebug'
   gem 'minitest-rails', '~> 3.0'
   gem 'faker', '~> 1.8', '>= 1.8.4'
   gem 'factory_girl_rails', '~> 4.8'
