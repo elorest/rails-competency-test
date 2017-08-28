@@ -26,8 +26,9 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      redirect_to article_path(@article.id)
+      redirect_to article_path(@article.id), notice: 'Article updated!'
     else
+      flash.now[:error] = @article.errors.full_messages
       render :edit
     end
   end
@@ -36,9 +37,13 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article.destroy
-
-    redirect_to articles_path, notice: 'Article deleted!'
+    if @article.user == current_user
+      @article.destroy
+      redirect_to articles_path, notice: 'Article deleted!'
+    else
+      flash.now[:error] = "You don't own this article"
+      render :show
+    end
   end
 
   private
