@@ -6,6 +6,8 @@ class Article < ApplicationRecord
   validates :category, presence: true
 
   scope :first_three_from_each_category, -> do 
-    all.group_by {|a| a.category }.map {|i| i.first(3) }.to_h 
+    pluck(:category).uniq.map do |cat|
+      [cat, where(category: cat).limit(3)]
+    end.to_h
   end 
 end
