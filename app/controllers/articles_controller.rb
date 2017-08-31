@@ -1,5 +1,4 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
   before_action :find_article, except: [:index, :new, :create]
   access all: [:index], editor: :all, [:user, :admin] => [:index, :show]
 
