@@ -1,0 +1,18 @@
+.row 
+  .col-xs-12
+    .card
+      .caption
+        .row
+          .col-xs-6
+            h1= @article.title.titleize
+          .col-xs-6.text-right
+            h3= @article.category.titleize
+          hr
+        .row
+          .col-xs-12
+            h5= @article.content.capitalize
+        .row
+          .col-xs-6.text-right.col-xs-offset-6
+            - if @article.user == current_user
+              = link_to 'Edit', edit_article_path(@article), class: 'btn-ghost btn-sm btn'
+              = link_to 'Delete', article_path(@article), class: 'btn btn-danger btn-sm', method: :delete 

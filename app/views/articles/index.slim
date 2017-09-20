@@ -1,0 +1,16 @@
+- @articles.each_slice(3) do |slice|
+  .row
+    - slice.each do |art|
+      .col-xs-12.col-md-4
+        .card
+          .caption
+            h3= art.title.titleize
+            p= art.content
+            p
+              | By: 
+              = art.user.email
+            p
+              = link_to('Read', article_path(art.id), class: 'btn btn-default')
+              = link_to('Edit', edit_article_path(art.id), class: 'btn btn-ghost') if art.user == current_user
+
+            
